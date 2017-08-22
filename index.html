@@ -12,6 +12,7 @@
 <script src="js/jquery.js"></script>
  <script src="js/jquery.nicescroll.js"></script>
   <script src="js/aos.js"></script>
+     
 <script src="js/lightbox.js"></script>
 <script src="js/bootstrap.js"></script>
 <script>
@@ -36,8 +37,9 @@
                         <div id="intro">
              <div class="col-md-6 col-sm-6 col-xs-6"><img src="images/bg1.jpg" class="img-responsive aos-item" data-aos="zoom-in" style="border-radius:200px;"></div>
              <div class="col-md-6 col-sm-6 col-xs-6" id="intro1" >
-             <h3 > Hello, I'm Uche Chinedu.</h3>
-              <h4> UI & Front-End Web Developer.</h4>
+             <h3 class='wow fadeInDown'> Hello, I'm Uche Chinedu.</h3>
+              <h4 class='wow pulse'
+             data-wow-iteration="infinite" data-wow-duration="1500ms"> UI & Front-End Web Developer.</h4>
      <a  href="#projects"><button  class="btn btn-danger btn-large aos-item" data-aos="fade-left" >CHECK PORTFOLIO</button></a>
                 </div></div></div>
                       </div>  <br><div id="space"><br><br><br> <br> </div>
@@ -102,8 +104,8 @@
                       <section id="projects">
                           <div class="row">
                             <div class="col-md-4 col-sm-4 col-xs-4" >
-                <a href="images/img2.png" class="thumbnail " data-lightbox="gallery" data-title="Inspiration avenue(http://chynedu.github.io)" >
-                    <img src="images/img2.png"  class="img-responsive aos-item" data-aos="zoom-in"></a></div>
+                <a href="images/img2.jpg" class="thumbnail " data-lightbox="gallery" data-title="Inspiration avenue(http://chynedu.github.io)" >
+                    <img src="images/img2.jpg"  class="img-responsive aos-item" data-aos="zoom-in"></a></div>
                      <div class="col-md-4 col-sm-4 col-xs-4">
                 <a href="images/img3.jpg" data-lightbox="gallery" data-title="Inspiration avenue(http://chynedu.github.io)" class="thumbnail">
                     <img src="images/img3.jpg"  class="img-responsive aos-item" data-aos="zoom-in"></a></div>
@@ -156,11 +158,30 @@
   </footer>
 </div>
 </div>
-</body
+</body>
  <div class="clearfix"></div>
+ <script type="text/javascript" src="js/wow.min.js"></script>
                   <script>
       AOS.init({
         easing: 'ease-in-out-sine'
       });
+
+        var wow= new WOW(
+        {
+          boxClass:     'wow',      // animated element css class (default is wow)
+    animateClass: 'animated', // animation css class (default is animated)
+    offset:       0,          // distance to the element when triggering the animation (default is 0)
+    mobile:       true,       // trigger animations on mobile devices (default is true)
+    live:         true,       // act on asynchronously loaded content (default is true)
+    callback:     function(box) {
+      // the callback is fired every time an animation is started
+      // the argument that is passed in is the DOM node being animated
+    },
+    }
+    );
+
+    wow.init();
+
     </script>  
+    
 </html>
